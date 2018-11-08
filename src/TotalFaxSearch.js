@@ -9,7 +9,7 @@ import Select from '@material-ui/core/Select';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import DateTime from './datetime';
+import TextField from '@material-ui/core/TextField';
 
 const styles = theme => ({
   root: {
@@ -27,6 +27,12 @@ const styles = theme => ({
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     color: theme.palette.text.secondary,
+  },
+  textField: {
+    marginTop: theme.spacing.unit,
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200,
   },
 });
 
@@ -97,7 +103,27 @@ class SimpleSelect extends React.Component {
                     <MenuItem value={40}>CNTO1275CRD3005</MenuItem>
                 </Select>
                 </FormControl>     
-                <DateTime></DateTime>             
+                  
+                <TextField
+                  id="datefrom"
+                  label="Date From"
+                  type="date"
+                  defaultValue=""
+                  className={classes.textField}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />    
+                <TextField
+                  id="dateto"
+                  label="Date To"
+                  type="date"
+                  defaultValue=""
+                  className={classes.textField}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />      
             </Grid> 
         </Paper>  
         </Grid>           
