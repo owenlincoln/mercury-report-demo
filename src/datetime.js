@@ -9,6 +9,7 @@ const styles = theme => ({
     flexWrap: 'wrap',
   },
   textField: {
+    marginTop: theme.spacing.unit,
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
     width: 200,
@@ -19,7 +20,7 @@ function DatePickers(props) {
   const { classes } = props;
 
   return (
-    <form className={classes.container} noValidate>
+    
       <TextField
         id="date"
         label="Birthday"
@@ -30,7 +31,7 @@ function DatePickers(props) {
           shrink: true,
         }}
       />
-    </form>
+   
   );
 }
 
