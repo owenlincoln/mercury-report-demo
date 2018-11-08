@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Toolbar from '@material-ui/core/Toolbar';
 
 const styles = theme => ({
   root: {
@@ -58,12 +59,14 @@ class SimpleSelect extends React.Component {
       <form className={classes.root} autoComplete="off">
       <Grid item xs={12}>
         <Paper className={classes.root} elevation={1}>
-            <Grid item xs={2}>
-                <Typography align='left' variant="h5" component="h5">
-                Search
+            <Grid item xs={1}>
+            <Toolbar>
+                <Typography variant="h6" color="inherit">
+                    Search
                 </Typography>
+            </Toolbar>
             </Grid>
-            <Grid item xs={10}>
+            <Grid item xs={11}>
                 <FormControl className={classes.formControl}>
                 <InputLabel shrink htmlFor="sponsor-placeholder">
                     Sponsor
@@ -128,8 +131,12 @@ class SimpleSelect extends React.Component {
                     shrink: true,
                   }}
                 />    
-                <Button variant="outlined" color="primary" className={classes.button}>
+                
+                <Button id="savereport" variant="outlined" color="primary" className={classes.button}>
                   Search
+                </Button>  
+                <Button id="exportreport" variant="outlined" color="secondary" className={classes.button}>
+                  Export Report
                 </Button>  
             </Grid> 
         </Paper>  
