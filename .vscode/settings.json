@@ -1,0 +1,7 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/cc10abc2-4fbf-4c1a-88e6-b3645b4adaaa/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/MercuryReportDemo",
+    "appService.deploySubpath": ""
+}
