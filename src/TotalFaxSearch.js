@@ -10,6 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
   root: {
@@ -33,6 +34,9 @@ const styles = theme => ({
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
     width: 200,
+  },
+  button: {
+    margin: theme.spacing.unit,
   },
 });
 
@@ -123,7 +127,10 @@ class SimpleSelect extends React.Component {
                   InputLabelProps={{
                     shrink: true,
                   }}
-                />      
+                />    
+                <Button variant="outlined" color="primary" className={classes.button}>
+                  Search
+                </Button>  
             </Grid> 
         </Paper>  
         </Grid>           
