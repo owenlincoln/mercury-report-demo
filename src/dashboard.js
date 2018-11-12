@@ -1,4 +1,5 @@
 import React from 'react';
+import { Switch, Route } from "react-router-dom";
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
@@ -139,7 +140,7 @@ class Dashboard extends React.Component {
               noWrap
               className={classes.title}
             >
-              Reports
+              Mercury Cloud Fax Demo
             </Typography>
             <IconButton color="inherit">
               <UserIcon />
@@ -164,23 +165,46 @@ class Dashboard extends React.Component {
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
           <div className={classes.tableContainer}>
-            <Grid container spacing={24}>
-              <Grid item xs={12}>
-                <TotalFaxSearch />
-              </Grid>
-              <Grid item xs={12}>
-                <Typography variant="h5" gutterBottom component="h2">
-                  Total Fax Report
-                </Typography>
-                <TotalFaxReport />
-                </Grid>
-            </Grid>
+            <Main />
           </div>
         </main>
       </div>
     );
   }
 }
+
+const Home = () => (
+  <div className='home'>
+    <Grid container spacing={24}>
+      <Grid item xs={12}>
+          <Typography variant="h6" color="inherit">
+            Welcome to the Cloud Fax Dashboard
+          </Typography>
+      </Grid>
+    </Grid>
+  </div>
+);
+
+const Reports = () => (
+  <Grid container spacing={24}>
+    <Grid item xs={12}>
+      <TotalFaxSearch />
+    </Grid>
+    <Grid item xs={12}>
+      <Typography variant="h5" gutterBottom component="h2">
+        Total Fax Report
+      </Typography>
+      <TotalFaxReport />
+    </Grid>
+  </Grid>
+);
+
+const Main = () => (
+  <Switch>
+    <Route exact path='/' component={Home}></Route>
+    <Route exact path='/reports' component={Reports}></Route>
+  </Switch>
+);
 
 Dashboard.propTypes = {
   classes: PropTypes.object.isRequired,
