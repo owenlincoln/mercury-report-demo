@@ -14,10 +14,9 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import UserIcon from '@material-ui/icons/Person';
-import { mainListItems } from './listitems';
-import TotalFaxReport from './TotalFaxReport';
-import TotalFaxSearch from './TotalFaxSearch';
-import Grid from '@material-ui/core/Grid';
+import { mainListItems } from '../listitems';
+import Dashboard from './Dashboard.js';
+import Reports from './Reports.js';
 
 const drawerWidth = 240;
 
@@ -98,7 +97,7 @@ const styles = theme => ({
   },
 });
 
-class Dashboard extends React.Component {
+class Main extends React.Component {
   state = {
     open: false,
   };
@@ -165,7 +164,7 @@ class Dashboard extends React.Component {
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
           <div className={classes.tableContainer}>
-            <Main />
+            <Content />
           </div>
         </main>
       </div>
@@ -173,35 +172,9 @@ class Dashboard extends React.Component {
   }
 }
 
-const Home = () => (
-  <div className='home'>
-    <Grid container spacing={24}>
-      <Grid item xs={12}>
-          <Typography variant="h6" color="inherit">
-            Welcome to the Cloud Fax Dashboard
-          </Typography>
-      </Grid>
-    </Grid>
-  </div>
-);
-
-const Reports = () => (
-  <Grid container spacing={24}>
-    <Grid item xs={12}>
-      <TotalFaxSearch />
-    </Grid>
-    <Grid item xs={12}>
-      <Typography variant="h5" gutterBottom component="h2">
-        Total Fax Report
-      </Typography>
-      <TotalFaxReport />
-    </Grid>
-  </Grid>
-);
-
-const Main = () => (
+const Content = () => (
   <Switch>
-    <Route exact path='/' component={Home}></Route>
+    <Route exact path='/' component={Dashboard}></Route>
     <Route exact path='/reports' component={Reports}></Route>
   </Switch>
 );
@@ -210,5 +183,5 @@ Dashboard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Dashboard);
+export default withStyles(styles)(Main);
 

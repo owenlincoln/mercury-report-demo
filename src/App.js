@@ -1,9 +1,9 @@
 import React from 'react';
-import Dashboard from './dashboard';
+import Main from './views/Main';
 
 const App = () => (
   <div className='app'>
-    <Dashboard />
+    <Main />
   </div>
 );
 
