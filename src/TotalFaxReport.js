@@ -24,6 +24,7 @@ const columns = ["SPONSOR", "STUDY", "FROM", "TO", "COMPLETED FAXES", "COMPLETED
 const options = {
   filter: false,
   selectableRows: false,
+  search: false,
 };
 
 function DataTable(props) {
