@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from './views/Main';
+import Main from './views/MainMenu';
 
 const App = () => (
   <div className='app'>
