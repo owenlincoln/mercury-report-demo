@@ -1,9 +1,11 @@
 import React from 'react';
-import Main from './views/MainMenu';
+import Main from './components/MainMenu';
+import Footer from './components/Footer';
 
 const App = () => (
   <div className='app'>
     <Main />
+    <Footer />
   </div>
 );
 

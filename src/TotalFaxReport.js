@@ -14,7 +14,20 @@ const styles = theme => ({
 
 const data = [
   ['Acerta', 'ACE-LY-003', '7 Nov 2018', '8 Nov 2018', 45, 45, 24],
+  ['Acerta', 'ACE-LY-003', '7 Nov 2018', '8 Nov 2018', 45, 45, 24],
+  ['Acerta', 'ACE-LY-003', '7 Nov 2018', '8 Nov 2018', 45, 45, 24],
+  ['Acerta', 'ACE-LY-003', '7 Nov 2018', '8 Nov 2018', 45, 45, 24],
+  ['Acerta', 'ACE-LY-003', '7 Nov 2018', '8 Nov 2018', 45, 45, 24],
+  ['Acerta', 'ACE-LY-003', '7 Nov 2018', '8 Nov 2018', 45, 45, 24],
   ['Genetech', 'GO40782', '7 Nov 2018', '8 Nov 2018', 10, 5, 5],
+  ['Genetech', 'GO40782', '7 Nov 2018', '8 Nov 2018', 10, 5, 5],
+  ['Genetech', 'GO40782', '7 Nov 2018', '8 Nov 2018', 10, 5, 5],
+  ['Genetech', 'GO40782', '7 Nov 2018', '8 Nov 2018', 10, 5, 5],
+  ['Genetech', 'GO40782', '7 Nov 2018', '8 Nov 2018', 10, 5, 5],
+  ['Gilead', 'GS-US-427-4024', '7 Nov 2018', '8 Nov 2018', 78, 40, 38],
+  ['Gilead', 'GS-US-427-4024', '7 Nov 2018', '8 Nov 2018', 78, 40, 38],
+  ['Gilead', 'GS-US-427-4024', '7 Nov 2018', '8 Nov 2018', 78, 40, 38],
+  ['Gilead', 'GS-US-427-4024', '7 Nov 2018', '8 Nov 2018', 78, 40, 38],
   ['Gilead', 'GS-US-427-4024', '7 Nov 2018', '8 Nov 2018', 78, 40, 38],
   ['Janssen', 'CNTO1275CRD3005', '7 Nov 2018', '8 Nov 2018', 9, 6, 3],
 ];
