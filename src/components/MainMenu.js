@@ -7,8 +7,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Dashboard from './Dashboard.js';
 import Reports from './Reports.js';
-import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
+import BracketLogo from '../logo.png'; 
 
 const styles = theme => ({
     root: {
@@ -20,6 +20,9 @@ const styles = theme => ({
       padding: theme.spacing.unit * 2,
       overflow: 'auto',
     },
+    header: {
+        padding: theme.spacing.unit * 1,
+      },
   });
 
 class MainMenu extends React.Component {
@@ -38,19 +41,20 @@ class MainMenu extends React.Component {
 
         return (
             <div className={classes.root}>
-                <AppBar position="static" color="default">
+                
+                <AppBar className={classes.header} position="static" color="default">
                     <Toolbar>
-                    <Typography variant="h6" color="inherit">
-                        Photos
-                    </Typography>
+                        <img src={BracketLogo} alt="logo" />
                     </Toolbar>
                 </AppBar>
+               
                 <AppBar position="static">
-                <Tabs value={value} onChange={this.handleChange}>
-                    <Tab label="Dashboard" component={NavLink} to="/" button />
-                    <Tab label="Reports" component={NavLink} to="/reports" button />
-                </Tabs>
+                    <Tabs value={value} onChange={this.handleChange}>
+                        <Tab label="Dashboard" component={NavLink} to="/" button />
+                        <Tab label="Reports" component={NavLink} to="/reports" button />
+                    </Tabs>
                 </AppBar>
+
                 <main className={classes.content}>
                     <Content />
                 </main>

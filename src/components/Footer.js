@@ -14,7 +14,7 @@ class Footer extends Component {
 
     return (
       <div className={classes.footer}>
-        <Typography>Footer Text</Typography>
+        <Typography id="copyrightText" variant="caption">&copy; Copyright {(new Date().getFullYear())} Bracket</Typography>
       </div>
     );
   }
