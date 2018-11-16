@@ -24,7 +24,7 @@ const CustomTableCell = withStyles(theme => ({
       fontSize: 14,
     },
   }))(TableCell);
-
+ 
 const actionsStyles = theme => ({
   root: {
     flexShrink: 0,

@@ -1,5 +1,5 @@
 import React from 'react';
-import Main from './components/MainMenu';
+import Main from './components/MainMenuDrawer';
 import Footer from './components/Footer';
 
 const App = () => (
@@ -9,4 +9,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default App; 
